@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Construction Debris Affecting Urban Drainage and Land Use - Environmental Science Project">
+
+    <meta name="keywords"
+        content="construction debris, urban drainage, land use, environmental science, sustainable construction">
+
+    <title>BUILDWISE | Construction & Urban Environment</title>
+
+    <!-- Stylish Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 135px;
+        }
+
+        body {
+            background: #f6f4eb;
+            color: #20252b;
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+        }
+
+        :root {
+            --navy: #071a33;
+            --navy2: #102d50;
+            --cream: #f5edcf;
+            --cream2: #fffdf4;
+            --gold: #d6b653;
+            --text: #20252b;
+            --muted: #69737d;
+            --border: #dedbd0;
+            --white: #ffffff;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            height: 29px;
+            background: var(--navy);
+            color: #dbe5ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           MAIN HEADER
+        ========================= */
+
+        header {
+            background: var(--navy);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-main {
+            max-width: 1300px;
+            min-height: 76px;
+            margin: auto;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .tagline {
+            color: #c6d0dc;
+            font-size: 9px;
+            margin-top: -2px;
+        }
+
+
+        /* =========================
+           MAIN NAV
+        ========================= */
+
+        .main-links {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .main-links a {
+            color: #eaf0f5;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 8px 11px;
+            border-radius: 5px;
+            transition: 0.25s;
+        }
+
+        .main-links a:hover,
+        .main-links a.active {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-area {
+            display: flex;
+            width: 250px;
+            height: 35px;
+        }
+
+        .search-area input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 0 12px;
+            font-size: 11px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-area button {
+            width: 42px;
+            border: none;
+            cursor: pointer;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 0 5px 5px 0;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .search-area button:hover {
+            background: #ead17b;
+        }
+
+
+        /* =========================
+           TOPIC BAR
+        ========================= */
+
+        .topic-bar {
+            background: var(--cream);
+            border-bottom: 1px solid #ddd3b5;
+            position: sticky;
+            top: 76px;
+            z-index: 900;
+        }
+
+        .topic-container {
+            max-width: 1300px;
+            margin: auto;
+            min-height: 44px;
+            padding: 0 25px;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        .topic-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--navy);
+            padding-right: 15px;
+            margin-right: 3px;
+            border-right: 1px solid #cfc4a4;
+            white-space: nowrap;
+        }
+
+        .topic-container a {
+            color: #374451;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 13px 11px;
+            white-space: nowrap;
+            transition: 0.25s;
+            position: relative;
+        }
+
+        .topic-container a:hover {
+            background: #e9dfbd;
+            color: var(--navy);
+        }
+
+        .topic-container a.active {
+            color: var(--navy);
+            background: #e8ddb7;
+        }
+
+        .topic-container a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            height: 3px;
+            background: var(--navy);
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+            max-width: 1300px;
+            margin: auto;
+            padding: 25px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            padding: 28px;
+            margin-bottom: 14px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--cream);
+            color: #725d20;
+            padding: 4px 9px;
+            border-radius: 3px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.12;
+            color: var(--navy);
+            max-width: 950px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #967823;
+        }
+
+        .hero-text {
+            max-width: 800px;
+            color: var(--muted);
+            font-size: 12px;
+            border-left: 3px solid var(--gold);
+            padding-left: 11px;
+        }
+
+
+        /* =========================
+           IMAGE STYLE
+        ========================= */
+
+        .image-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-top: 18px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.35s ease;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.45s ease, filter 0.45s ease;
+        }
+
+        .image-box:hover {
+            border-color: var(--gold);
+            box-shadow: 0 8px 25px rgba(7, 26, 51, 0.2);
+        }
+
+        .image-box:hover img {
+            transform: scale(1.06);
+            filter: brightness(1.08);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 13px 16px;
+            color: white;
+            font-size: 11px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding-top: 35px;
+        }
+
+
+        /* =========================
+           QUICK CARDS
+        ========================= */
+
+        .message-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .message {
+            background: var(--cream2);
+            border: 1px solid #e2ddca;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 10px;
+            color: #59636d;
+            transition: 0.25s;
+        }
+
+        .message:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold);
+        }
+
+        .message strong {
+            color: var(--navy);
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .section {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 27px 31px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 9px rgba(0,0,0,0.025);
+            scroll-margin-top: 140px;
+            transition: 0.25s;
+        }
+
+        .section.current-section {
+            border-color: #cbb35f;
+            box-shadow: 0 4px 18px rgba(181, 151, 54, 0.08);
+        }
+
+        .section-label {
+            font-family: "Space Grotesk", sans-serif;
+            color: #947821;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            margin-bottom: 4px;
+        }
+
+        .section h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--navy);
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .section p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================
+           SECTION IMAGE GRID
+        ========================= */
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .photo-grid .image-box {
+            margin-top: 0;
+        }
+
+        .photo-grid .image-box img {
+            height: 210px;
+        }
+
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
+
+        .highlight {
+            margin-top: 14px;
+            padding: 12px 15px;
+            background: var(--cream2);
+            border-left: 3px solid var(--gold);
+            color: #59636d;
+            font-size: 11px;
+        }
+
+        .highlight strong {
+            color: var(--navy);
+        }
+
+
+        /* =========================
+           MATERIAL CARDS
+        ========================= */
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 9px;
+            margin-top: 16px;
+        }
+
+        .material {
+            background: #fafaf7;
+            border: 1px solid #e2e0d8;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .material:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+        }
+
+        .material-icon {
+            font-size: 21px;
+        }
+
+        .material h3 {
+            font-family: "Space Grotesk", sans-serif;
+            color: var(--navy);
+            font-size: 12px;
+            margin: 4px 0;
+        }
+
+        .material p {
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           FLOW
+        ========================= */
+
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .flow-box {
+            min-width: 105px;
+            padding: 11px;
+            text-align: center;
+            background: var(--cream2);
+            border: 1px solid #ded8c4;
+            border-radius: 5px;
+            transition: 0.25s;
+        }
+
+        .flow-box:hover {
+            transform: scale(1.04);
+            border-color: var(--gold);
+        }
+
+        .flow-box span {
+            display: block;
+            font-size: 20px;
+        }
+
+        .flow-box strong {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 9px;
+            color: var(--navy);
+        }
+
+        .flow-arrow {
+            color: #9b812f;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           LAND
+        ========================= */
+
+        .land-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .land-point {
+            background: #faf9f3;
+            border-left: 3px solid var(--gold);
+            padding: 10px 13px;
+            font-size: 10px;
+            color: #59636c;
+        }
+
+
+        /* =========================
+           IMPACT
+        ========================= */
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 9px;
+            margin-top: 15px;
+        }
+
+        .impact {
+            text-align: center;
+            padding: 15px 10px;
+            background: #fafaf7;
+            border-top: 2px solid var(--navy);
+            transition: 0.25s;
+        }
+
+        .impact:hover {
+            transform: translateY(-3px);
+            border-top-color: var(--gold);
+        }
+
+        .impact-icon {
+            font-size: 21px;
+        }
+
+        .impact h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 12px;
+            color: var(--navy);
+            margin: 4px 0;
+        }
+
+        .impact p {
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           FOUR R
+        ========================= */
+
+        .four-r {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 9px;
+            margin-top: 15px;
+        }
+
+        .r-card {
+            background: var(--navy);
+            color: white;
+            padding: 16px;
+            border-bottom: 3px solid var(--gold);
+            transition: 0.25s;
+        }
+
+        .r-card:hover {
+            transform: translateY(-4px);
+            background: var(--navy2);
+        }
+
+        .r-card strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            color: var(--cream);
+        }
+
+        .r-card small {
+            color: #cbd5df;
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           CASE STUDY
+        ========================= */
+
+        .case {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            padding: 18px;
+            background: #f8f7f0;
+            border: 1px solid #dfdccd;
+        }
+
+        .case-icon {
+            font-size: 30px;
+        }
+
+
+        /* =========================
+           SOLUTIONS
+        ========================= */
+
+        .solution {
+            display: flex;
+            gap: 15px;
+            padding: 13px 0;
+            border-bottom: 1px solid #e7e5de;
+        }
+
+        .solution-number {
+            font-family: "Space Grotesk", sans-serif;
+            color: #9a7b24;
+            font-size: 11px;
+            font-weight: 700;
+            min-width: 25px;
+        }
+
+        .solution h3 {
+            font-family: "Space Grotesk", sans-serif;
+            color: var(--navy);
+            font-size: 12px;
+        }
+
+        .solution p {
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           ACTION
+        ========================= */
+
+        .action-box {
+            background: var(--navy);
+            color: white;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .action-box p {
+            color: #dce5ed;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background: var(--cream);
+            color: var(--navy);
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           QUIZ
+        ========================= */
+
+        .quiz {
+            margin-top: 15px;
+            padding: 18px;
+            background: #faf9f4;
+            border: 1px solid #dfdccd;
+        }
+
+        .question {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .quiz button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: white;
+            border: 1px solid #dcdad1;
+            padding: 9px 11px;
+            margin: 5px 0;
+            cursor: pointer;
+            font-size: 10px;
+            transition: 0.2s;
+        }
+
+        .quiz button:hover {
+            background: var(--cream);
+            border-color: var(--gold);
+        }
+
+        #quizResult {
+            margin-top: 9px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           REFERENCES
+        ========================= */
+
+        .references {
+            padding-left: 18px;
+            margin-top: 10px;
+        }
+
+        .references li {
+            font-size: 10px;
+            color: var(--muted);
+            padding: 3px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 3px solid var(--gold);
+        }
+
+        .footer-logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        footer p,
+        .footer-right {
+            color: #c5d0db;
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           QUICK NOTE
+        ========================= */
+
+        .quick-note {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 210px;
+            background: white;
+            border: 1px solid #d8d5c9;
+            padding: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            z-index: 2000;
+        }
+
+        .quick-note button {
+            position: absolute;
+            top: 5px;
+            right: 7px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .quick-note strong {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 10px;
+            color: var(--navy);
+        }
+
+        .quick-note p {
+            font-size: 9px;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-hidden {
+            display: none !important;
+        }
+
+        .search-found {
+            border-color: var(--gold) !important;
+            box-shadow: 0 0 0 3px rgba(214,182,83,0.18) !important;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .main-links {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-area {
+                width: 220px;
+            }
+
+            .material-grid,
+            .impact-grid,
+            .four-r {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .header-main {
+                gap: 10px;
+            }
+
+            .logo-area {
+                min-width: auto;
+            }
+
+            .search-area {
+                width: 100%;
+                order: 4;
+            }
+
+            .main-links {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+
+            .page {
+                padding: 15px;
+            }
+
+            .hero {
+                padding: 22px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .message-row,
+            .material-grid,
+            .impact-grid,
+            .four-r,
+            .land-grid,
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow {
+                flex-direction: column;
+            }
+
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+
+            .section {
+                padding: 21px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .quick-note {
+                width: 190px;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================= -->
+
+    <div class="top-bar">
+        ENVIRONMENTAL SCIENCE • ACADEMIC PROJECT
+    </div>
+
+
+    <!-- =========================
+         MAIN HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="header-main">
+
+            <div class="logo-area">
+
+                <div class="logo">
+                    BUILD<span>WISE</span>
+                </div>
+
+                <div class="tagline">
+                    Construction & Urban Environment
+                </div>
+
+            </div>
+
+
+            <nav class="main-links">
+
+                <a href="#home" class="active nav-link">
+                    Home
+                </a>
+
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="#impact" class="nav-link">
+                    Impact
+                </a>
+
+                <a href="#solutions" class="nav-link">
+                    Solutions
+                </a>
+
+            </nav>
+
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search this project..."
+                >
+
+                <button onclick="searchContent()">
+                    🔍
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         TOPIC BAR
+    ========================= -->
+
+    <div class="topic-bar">
+
+        <div class="topic-container">
+
+            <div class="topic-title">
+                PROJECT TOPICS
+            </div>
+
+            <a href="#home" class="topic-link active">
+                Home
+            </a>
+
+            <a href="#debris" class="topic-link">
+                Construction Debris
+            </a>
+
+            <a href="#drainage" class="topic-link">
+                Urban Drainage
+            </a>
+
+            <a href="#land" class="topic-link">
+                Land Use
+            </a>
+
+            <a href="#impact" class="topic-link">
+                Environmental Impact
+            </a>
+
+            <a href="#facts" class="topic-link">
+                Key Information
+            </a>
+
+            <a href="#case-study" class="topic-link">
+                Case Study
+            </a>
+
+            <a href="#solutions" class="topic-link">
+                Sustainable Solutions
+            </a>
+
+            <a href="#action" class="topic-link">
+                What Can We Do?
+            </a>
+
+            <a href="#quiz" class="topic-link">
+                Quiz
+            </a>
+
+            <a href="#references" class="topic-link">
+                References
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         WEBSITE CONTENT
+    ========================= -->
+
+    <main class="page">
+
+
+        <!-- HERO -->
+
+        <section id="home" class="hero searchable">
+
+            <div class="hero-label">
+                ENVIRONMENTAL ISSUE
+            </div>
+
+            <h1>
+                Construction Debris Affecting
+                <span>Urban Drainage & Land Use</span>
+            </h1>
+
+            <p class="hero-text">
+                Construction waste can block drainage, occupy valuable land
+                and increase environmental pressure.
+            </p>
+
+
+            <!-- HERO IMAGE -->
+
+            <div class="image-box">
+
+                <img
+                    src="https://images.unsplash.com/photo-1504307651254-35680f35680f?auto=format&fit=crop&w=1400&q=85"
+                    alt="Construction site"
+                >
+
+                <div class="image-caption">
+                    Construction activity and responsible waste management
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK MESSAGES -->
+
+        <div class="message-row">
+
+            <div class="message">
+                🏗️ <strong>Build responsibly</strong> — manage waste properly.
+            </div>
+
+            <div class="message">
+                💧 <strong>Keep drains clear</strong> — prevent blockages.
+            </div>
+
+            <div class="message">
+                ♻️ <strong>Recover materials</strong> — reduce waste.
+            </div>
+
+        </div>
+
+
+        <!-- INTRODUCTION -->
+
+        <section id="about" class="section searchable">
+
+            <div class="section-label">
+                01 — INTRODUCTION
+            </div>
+
+            <h2>
+                Why Does It Matter?
+            </h2>
+
+            <p>
+                Construction and demolition activities generate materials
+                such as concrete, bricks, soil, wood and metal. Poorly
+                managed debris can enter drainage systems, occupy valuable
+                land and create environmental concerns.
+            </p>
+
+            <div class="highlight">
+                <strong>Key idea:</strong>
+                Responsible construction-waste management helps protect
+                drainage systems, land resources and urban environments.
+            </div>
+
+        </section>
+
+
+        <!-- CONSTRUCTION DEBRIS -->
+
+        <section id="debris" class="section searchable">
+
+            <div class="section-label">
+                02 — CONSTRUCTION
+            </div>
+
+            <h2>
+                Construction Debris
+            </h2>
+
+            <p>
+                Construction debris consists of materials generated during
+                building, renovation and demolition activities.
+            </p>
+
+
+            <div class="photo-grid">
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1590644365607-1c5a0e0c0f1f?auto=format&fit=crop&w=1000&q=85"
+                        alt="Construction materials"
+                    >
+
+                    <div class="image-caption">
+                        Construction materials and building activity
+                    </div>
+
+                </div>
+
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?auto=format&fit=crop&w=900&q=85"
+                        alt="Construction worker"
+                    >
+
+                    <div class="image-caption">
+                        Safe and organized construction practices
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="material-grid">
+
+                <div class="material">
+                    <div class="material-icon">🧱</div>
+                    <h3>Concrete & Bricks</h3>
+                    <p>Common construction and demolition materials.</p>
+                </div>
+
+                <div class="material">
+                    <div class="material-icon">🌱</div>
+                    <h3>Soil & Sand</h3>
+                    <p>Excavated materials that may accumulate around sites.</p>
+                </div>
+
+                <div class="material">
+                    <div class="material-icon">🪵</div>
+                    <h3>Wood</h3>
+                    <p>Generated through structures and packaging.</p>
+                </div>
+
+                <div class="material">
+                    <div class="material-icon">🔩</div>
+                    <h3>Metal</h3>
+                    <p>Materials that can often be recovered and recycled.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DRAINAGE -->
+
+        <section id="drainage" class="section searchable">
+
+            <div class="section-label">
+                03 — WATER SYSTEMS
+            </div>
+
+            <h2>
+                Urban Drainage
+            </h2>
+
+            <p>
+                Urban drainage systems carry rainwater away from roads,
+                buildings and developed areas. Construction debris can
+                obstruct these pathways.
+            </p>
+
+
+            <div class="image-box">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1400&q=85"
+                    alt="Rainwater and urban environment"
+                >
+
+                <div class="image-caption">
+                    Efficient drainage is essential for urban areas.
+                </div>
+
+            </div>
+
+
+            <div class="flow">
+
+                <div class="flow-box">
+                    <span>🏗️</span>
+                    <strong>Construction</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-box">
+                    <span>🚧</span>
+                    <strong>Debris</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-box">
+                    <span>💧</span>
+                    <strong>Blocked Drain</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-box">
+                    <span>🌧️</span>
+                    <strong>Water Accumulation</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LAND -->
+
+        <section id="land" class="section searchable">
+
+            <div class="section-label">
+                04 — LAND
+            </div>
+
+            <h2>
+                Land Use
+            </h2>
+
+            <p>
+                Uncontrolled dumping of construction waste can occupy open
+                spaces, reduce usable land and affect the appearance and
+                functionality of cities.
+            </p>
+
+
+            <div class="land-grid">
+
+                <div class="land-point">
+                    01 — Loss of usable open space
+                </div>
+
+                <div class="land-point">
+                    02 — Reduced land quality
+                </div>
+
+                <div class="land-point">
+                    03 — Visual pollution
+                </div>
+
+                <div class="land-point">
+                    04 — Obstruction of public spaces
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- IMPACT -->
+
+        <section id="impact" class="section searchable">
+
+            <div class="section-label">
+                05 — ENVIRONMENT
+            </div>
+
+            <h2>
+                Environmental Impact
+            </h2>
+
+
+            <div class="photo-grid">
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1532408840957-031d8034aeef?auto=format&fit=crop&w=1000&q=85"
+                        alt="Urban environmental landscape"
+                    >
+
+                    <div class="image-caption">
+                        Urban development and environmental balance
+                    </div>
+
+                </div>
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=85"
+                        alt="Sustainable environment"
+                    >
+
+                    <div class="image-caption">
+                        Sustainable approaches can reduce environmental pressure.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="impact-grid">
+
+                <div class="impact">
+                    <div class="impact-icon">💧</div>
+                    <h3>Water</h3>
+                    <p>Can interfere with drainage and water movement.</p>
+                </div>
+
+                <div class="impact">
+                    <div class="impact-icon">🌍</div>
+                    <h3>Land</h3>
+                    <p>Improper dumping can reduce land usefulness.</p>
+                </div>
+
+                <div class="impact">
+                    <div class="impact-icon">🌫️</div>
+                    <h3>Air</h3>
+                    <p>Construction dust can affect local air quality.</p>
+                </div>
+
+                <div class="impact">
+                    <div class="impact-icon">🏙️</div>
+                    <h3>Urban Life</h3>
+                    <p>Waste can affect roads and public spaces.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY INFORMATION -->
+
+        <section id="facts" class="section searchable">
+
+            <div class="section-label">
+                06 — KEY INFORMATION
+            </div>
+
+            <h2>
+                The 4R Approach
+            </h2>
+
+            <div class="four-r">
+
+                <div class="r-card">
+                    <strong>Reduce</strong>
+                    <small>Waste generation</small>
+                </div>
+
+                <div class="r-card">
+                    <strong>Reuse</strong>
+                    <small>Usable materials</small>
+                </div>
+
+                <div class="r-card">
+                    <strong>Recycle</strong>
+                    <small>Recoverable resources</small>
+                </div>
+
+                <div class="r-card">
+                    <strong>Recover</strong>
+                    <small>Useful materials</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CASE STUDY -->
+
+        <section id="case-study" class="section searchable">
+
+            <div class="section-label">
+                07 — CASE STUDY
+            </div>
+
+            <h2>
+                Urban Construction & Drainage
+            </h2>
+
+            <div class="case">
+
+                <div class="case-icon">
+                    🏙️
+                </div>
+
+                <p>
+                    In rapidly developing urban areas, loose construction
+                    materials can accumulate around roads and drainage
+                    channels. Proper collection, transportation and disposal
+                    can help reduce these problems.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLUTIONS -->
+
+        <section id="solutions" class="section searchable">
+
+            <div class="section-label">
+                08 — SOLUTIONS
+            </div>
+
+            <h2>
+                Sustainable Solutions
+            </h2>
+
+
+            <div class="solution">
+
+                <div class="solution-number">01</div>
+
+                <div>
+                    <h3>Segregate Waste</h3>
+                    <p>
+                        Separate concrete, metal, wood, soil and other materials.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="solution">
+
+                <div class="solution-number">02</div>
+
+                <div>
+                    <h3>Reuse Materials</h3>
+                    <p>
+                        Recover materials that can be used again.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="solution">
+
+                <div class="solution-number">03</div>
+
+                <div>
+                    <h3>Protect Drains</h3>
+                    <p>
+                        Prevent construction material from entering drainage systems.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="solution">
+
+                <div class="solution-number">04</div>
+
+                <div>
+                    <h3>Dispose Responsibly</h3>
+                    <p>
+                        Transport remaining waste to suitable facilities.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTION -->
+
+        <section id="action" class="section searchable">
+
+            <div class="section-label">
+                09 — ACTION
+            </div>
+
+            <h2>
+                What Can We Do?
+            </h2>
+
+            <div class="action-box">
+
+                <p>
+                    Small improvements in construction practices can help
+                    create cleaner, safer and more sustainable urban spaces.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">♻️ Reuse</span>
+                    <span class="tag">🚮 Dispose Properly</span>
+                    <span class="tag">💧 Protect Drains</span>
+                    <span class="tag">🌱 Reduce Waste</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ -->
+
+        <section id="quiz" class="section searchable">
+
+            <div class="section-label">
+                10 — QUICK QUIZ
+            </div>
+
+            <h2>
+                Test Your Knowledge
+            </h2>
+
+            <div class="quiz">
+
+                <div class="question">
+                    What can happen when construction debris enters a drainage system?
+                </div>
+
+                <button onclick="checkAnswer(this, false)">
+                    It improves water flow
+                </button>
+
+                <button onclick="checkAnswer(this, true)">
+                    It can block the drainage system
+                </button>
+
+                <button onclick="checkAnswer(this, false)">
+                    It cleans the drain
+                </button>
+
+                <div id="quizResult"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERENCES -->
+
+        <section id="references" class="section searchable">
+
+            <div class="section-label">
+                11 — REFERENCES
+            </div>
+
+            <h2>
+                References
+            </h2>
+
+            <ul class="references">
+
+                <li>
+                    Environmental Science academic resources
+                </li>
+
+                <li>
+                    Construction and Demolition Waste resources
+                </li>
+
+                <li>
+                    Urban drainage and sustainable development resources
+                </li>
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div>
+
+            <div class="footer-logo">
+                BUILDWISE
+            </div>
+
+            <p>
+                Construction & Urban Environment
+            </p>
+
+        </div>
+
+        <div class="footer-right">
+            Environmental Science Project • 2026
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         QUICK NOTE
+    ========================= -->
+
+    <div class="quick-note" id="quickNote">
+
+        <button onclick="closeNote()">
+            ×
+        </button>
+
+        <strong>
+            💡 QUICK NOTE
+        </strong>
+
+        <p>
+            Sustainable construction means managing resources responsibly.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           QUIZ
+        ========================= */
+
+        function checkAnswer(button, correct) {
+
+            const result = document.getElementById("quizResult");
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✓ Correct! Construction debris can block drainage systems.";
+
+                result.style.color = "#277343";
+
+            } else {
+
+                result.innerHTML =
+                    "✗ Not quite. Think about what happens when waste enters a drain.";
+
+                result.style.color = "#a33a3a";
+
+            }
+
+        }
+
+
+        /* =========================
+           CLOSE QUICK NOTE
+        ========================= */
+
+        function closeNote() {
+
+            document.getElementById("quickNote").style.display = "none";
+
+        }
+
+
+        /* =========================
+           WEBSITE SEARCH
+        ========================= */
+
+        function searchContent() {
+
+            const input = document.getElementById("searchInput");
+
+            const search = input.value.toLowerCase().trim();
+
+            const sections = document.querySelectorAll(".searchable");
+
+            sections.forEach(section => {
+
+                section.classList.remove("search-hidden");
+                section.classList.remove("search-found");
+
+            });
+
+
+            if (search === "") {
+                return;
+            }
+
+
+            let foundSection = null;
+
+
+            sections.forEach(section => {
+
+                const text = section.innerText.toLowerCase();
+
+                if (text.includes(search)) {
+
+                    if (!foundSection) {
+                        foundSection = section;
+                    }
+
+                    section.classList.add("search-found");
+
+                } else {
+
+                    section.classList.add("search-hidden");
+
+                }
+
+            });
+
+
+            if (foundSection) {
+
+                setTimeout(() => {
+
+                    foundSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+                }, 100);
+
+            } else {
+
+                alert("No matching topic found.");
+
+                sections.forEach(section => {
+                    section.classList.remove("search-hidden");
+                });
+
+            }
+
+        }
+
+
+        /* =========================
+           ENTER KEY SEARCH
+        ========================= */
+
+        document
+            .getElementById("searchInput")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+                    searchContent();
+                }
+
+            });
+
+
+        /* =========================
+           ACTIVE TOPIC HIGHLIGHT
+           CHANGES AUTOMATICALLY
+           WHILE SCROLLING
+        ========================= */
+
+        const sections = document.querySelectorAll(
+            ".hero, .section"
+        );
+
+        const topicLinks = document.querySelectorAll(
+            ".topic-link"
+        );
+
+        const mainLinks = document.querySelectorAll(
+            ".main-links .nav-link"
+        );
+
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        const id = entry.target.id;
+
+
+                        /* Topic navigation */
+
+                        topicLinks.forEach(link => {
+
+                            link.classList.remove("active");
+
+                            if (
+                                link.getAttribute("href") === "#" + id
+                            ) {
+                                link.classList.add("active");
+                            }
+
+                        });
+
+
+                        /* Main navigation */
+
+                        mainLinks.forEach(link => {
+
+                            link.classList.remove("active");
+
+                        });
+
+
+                        if (
+                            id === "home"
+                        ) {
+
+                            document
+                                .querySelector('.main-links a[href="#home"]')
+                                ?.classList.add("active");
+
+                        }
+
+                        else if (
+                            id === "about"
+                        ) {
+
+                            document
+                                .querySelector('.main-links a[href="#about"]')
+                                ?.classList.add("active");
+
+                        }
+
+                        else if (
+                            id === "impact"
+                        ) {
+
+                            document
+                                .querySelector('.main-links a[href="#impact"]')
+                                ?.classList.add("active");
+
+                        }
+
+                        else if (
+                            id === "solutions"
+                        ) {
+
+                            document
+                                .querySelector('.main-links a[href="#solutions"]')
+                                ?.classList.add("active");
+
+                        }
+
+
+                        /* Current section highlight */
+
+                        sections.forEach(section => {
+                            section.classList.remove(
+                                "current-section"
+                            );
+                        });
+
+                        entry.target.classList.add(
+                            "current-section"
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.35
+            }
+
+        );
+
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
